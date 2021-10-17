@@ -36,7 +36,7 @@ public class SaucedemoTest {
                
         
         
-        //System.setProperty("webdriver.chrome.driver", "chromedriver");
+        
         
         WebDriver driver = new ChromeDriver();
         
@@ -68,8 +68,7 @@ public class SaucedemoTest {
         
         
         WebElement item_name = driver.findElement(By.xpath("//div[@class='inventory_item_name']"));
-        //String s = item_name.getText();
-        //System.out.println(s);
+        
         
         ResultSet epro = stmt.executeQuery("select * from eproduct");
         
@@ -103,12 +102,6 @@ public class SaucedemoTest {
         WebElement item_price = driver.findElement(By.xpath("//div[@class='inventory_item_price']"));
         System.out.println(item_price.getText());
         
-        //if(item_price.getText().equals(Price)) {
-            //System.out.println("yes");
-       // }
-        //else {
-            //System.out.println("no");
-        //}
         
         WebElement finish = driver.findElement(By.xpath("//button[@class='btn btn_action btn_medium cart_button']"));
         finish.click();
